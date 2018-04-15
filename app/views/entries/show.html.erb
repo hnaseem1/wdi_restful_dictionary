@@ -1,2 +1,5 @@
 <h1>Entries#show</h1>
-<<p>This page will display information about entry number <%= params[:id] %></p>
+<%= link_to 'Index', root_url %>
+<h1><%= @entry.word %></h1>
+<h4><%= @entry.definition %></h4>
+<h4><%= @entry.language %></h4>
