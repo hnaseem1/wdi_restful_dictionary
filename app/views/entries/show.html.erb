@@ -1,5 +1,6 @@
-<h1>Entries#show</h1>
 <%= link_to 'Index', root_url %>
 <h1><%= @entry.word %></h1>
-<h4><%= @entry.definition %></h4>
-<h4><%= @entry.language %></h4>
+<h4>Definition: <%= @entry.definition %></h4>
+<h4>Language: <%= @entry.language %></h4>
+
+<%= link_to 'Edit', edit_entry_url %>

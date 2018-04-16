@@ -1,5 +1,7 @@
 <h1>Dictionary</h1>
 
+<h2><%= link_to 'New Entry', new_entry_url %></h2>
+
 <% @entries.each do |entry| %>
 
   <h1> <%= link_to entry.word, entry_url(entry.id) %></h1>
