@@ -17,7 +17,7 @@ class EntriesController < ApplicationController
 
   def update
 
-    @entry = Entry.new
+    @entry = Entry.find(params[:id])
     @entry.word = params[:entry][:word]
     @entry.definition = params[:entry][:definition]
     @entry.language = params[:entry][:language]
@@ -50,6 +50,8 @@ class EntriesController < ApplicationController
   # end
 
   def destroy
+    @entry = Entry.find(params[:id])
+    @entry.destroy
     redirect_to entries_url
   end
 end
